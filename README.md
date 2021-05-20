@@ -4,7 +4,7 @@ Assignment: mec-5.5.4-web-scraping-mini-project
 scripts:
 
 user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-css.py  
-
+```python  
 import scrapy  
 
 class QuotesSpider(scrapy.Spider):
@@ -23,8 +23,10 @@ class QuotesSpider(scrapy.Spider):
         if next_page is not None:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parse)
+```
 
 user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-xpath.py  
+```python  
 import scrapy
 class QuotesSpider(scrapy.Spider):
     name = "toscrape-xpath"
@@ -43,7 +45,7 @@ class QuotesSpider(scrapy.Spider):
         if next_page is not None:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parse)
-
+```  
 
 run:  
 `scrapy crawl toscrape-css -o css-scraper-results.json`  
