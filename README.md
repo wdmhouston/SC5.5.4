@@ -47,10 +47,10 @@ class QuotesSpider(scrapy.Spider):
             yield scrapy.Request(next_page, callback=self.parse)
 
 
-run:
-`scrapy crawl toscrape-css -o css-scraper-results.json`
-`scrapy crawl toscrape-xpath -o xpath-scraper-results.json`
+run:  
+`scrapy crawl toscrape-css -o css-scraper-results.json`  
+`scrapy crawl toscrape-xpath -o xpath-scraper-results.json`  
 
-outputs:
-  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/css-scraper-results.json
-  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/xpath-scraper-results.json
+outputs:  
+  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/css-scraper-results.json  
+  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/xpath-scraper-results.json  
