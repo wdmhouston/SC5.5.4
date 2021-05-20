@@ -4,7 +4,9 @@ Assignment: mec-5.5.4-web-scraping-mini-project
 scripts:
 
 user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-css.py  
+
 import scrapy  
+
 class QuotesSpider(scrapy.Spider):
     name = "toscrape-css"
     start_urls = [
@@ -21,7 +23,6 @@ class QuotesSpider(scrapy.Spider):
         if next_page is not None:
             next_page = response.urljoin(next_page)
             yield scrapy.Request(next_page, callback=self.parse)
-
 
 user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-xpath.py  
 import scrapy
