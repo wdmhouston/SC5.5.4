@@ -52,5 +52,5 @@ run:
 `scrapy crawl toscrape-xpath -o xpath-scraper-results.json`
 
 outputs:
-  scrapyminiproject/css-scraper-results.json
-  scrapyminiproject/cxpath-scraper-results.json
+  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/css-scraper-results.json
+  https://github.com/wdmhouston/SC5.5.4/blob/main/scrapyminiproject/scrapyminiproject/xpath-scraper-results.json
