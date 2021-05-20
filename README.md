@@ -3,15 +3,13 @@ Assignment: mec-5.5.4-web-scraping-mini-project
 
 scripts:
 
-user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-css.py
-import scrapy
-
+user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-css.py  
+import scrapy  
 class QuotesSpider(scrapy.Spider):
     name = "toscrape-css"
     start_urls = [
         'http://quotes.toscrape.com/page/1/',
-    ]
-
+    ]  
     def parse(self, response):
         for quote in response.css('div.quote'):
             yield {
@@ -25,9 +23,8 @@ class QuotesSpider(scrapy.Spider):
             yield scrapy.Request(next_page, callback=self.parse)
 
 
-user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-xpath.py
+user@ubuntu:~/SC5.5.4/scrapyminiproject/scrapyminiproject$ more spiders/toscrape-xpath.py  
 import scrapy
-
 class QuotesSpider(scrapy.Spider):
     name = "toscrape-xpath"
     start_urls = [
